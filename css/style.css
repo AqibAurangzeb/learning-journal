@@ -1,5 +1,136 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, 
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
 }
+
+/* typography */
+
+h1 {
+    font-size: 32px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #0E0E0E;
+}
+
+.hero-date {
+    font-size: 12px;
+}
+
+/* navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 17px 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1.8em;
+    margin-left: auto;
+}
+
+nav li a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #090909;
+    text-transform: uppercase;
+}
+
+nav img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.2em;
+}
+
+/* layout */
+
+section {
+    margin-bottom: 35px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 20px;
+    background-image: url(/images/hero-image.png);
+    background-size: cover;
+    height: 300px;
+    color: white;
+}
+
+.hero-date,
+.hero-title,
+.posts-card-date,
+.posts-card-title {
+    margin: 8px 0;
+}
+
+.hero-date {
+    text-transform: uppercase;
+}
+
+.hero-description,
+.posts-card-description {
+    margin: 0;
+}
+
+.posts {
+    display: grid;
+}
+
+.posts-card {
+    width: 400px;
+    height: 450px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.posts-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.posts-card-date {
+    text-transform: uppercase;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.footer-headline {
+    color: #ECECEC;
+}
+
+.footer-text {
+    color: #D7D7D7;
+}
+
+/* utility */
+
+/** TODO **/
+/**
+- line height
+- wide screen layout
+- burger menu expand
+**/
