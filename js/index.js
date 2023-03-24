@@ -16,7 +16,6 @@ function renderPosts() {
     `
   })
 
-
   postsGrid.innerHTML = postsGridDom
 }
 

@@ -10,6 +10,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/7658daa0b2.js" crossorigin="anonymous"></script>
+
         <title>My Learning Journal | My new journey as a bootcamp student</title>
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />      
@@ -19,10 +22,18 @@
             <nav>
                 <a class="no-text-decoration" href="index.html"><img src="images/logo.png" alt="speech bubble; learning journal logo"></a>
                 <a class="no-text-decoration" href="index.html"><h3 class="nav-title">My learning journal</h3></a>
-                <ul>
+                <ul class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-me.html">About Me</a></li>
                 </ul>
+                <i class="fa-solid fa-bars hamburger-menu" id="hamburger-menu"></i>
+                <div id="mobile-menu" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" id="mobile-menu-close-btn">&times;</a>
+                    <div class="overlay-content">
+                      <a href="index.html">Home</a>
+                      <a href="about-me.html">About</a>
+                    </div>   
+                  </div>
             </nav>
         </header>
         <main>
@@ -52,5 +63,6 @@
             </footer>
         </main>
         <script src="js/blog.js" type="module"></script>
+        <script src="js/navigation.js"></script>
     </body>
 </html>
