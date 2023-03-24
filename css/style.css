@@ -180,8 +180,19 @@ section {
 }
 
 .posts-card img {
+    background: white;
     width: 100%;
     object-fit: cover;
+}
+
+.posts-card img:hover {
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+.posts-card img:not(:hover) {
+    opacity: 100%;
+    transition: 0.5s;
 }
 
 .posts-card-date {
