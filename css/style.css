@@ -8,23 +8,28 @@ body {
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
+    background: #FAFAFA;
 }
 
 /* typography */
 
 h1 {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #0E0E0E;
 }
 
+p {
+    line-height: 1.5rem;
+}
+
 .hero-date {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 /* navigation */
@@ -32,7 +37,8 @@ h3 {
 nav {
     display: flex;
     align-items: center;
-    padding: 17px 20px;
+    padding: 1.0625em 1.25em;
+    background: white;
 }
 
 nav ul {
@@ -44,7 +50,7 @@ nav ul {
 
 nav li a {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
     text-decoration: none;
     color: #090909;
@@ -57,31 +63,40 @@ nav img {
     margin-right: 0.2em;
 }
 
+.nav-title {
+    display: inline;
+    font-size: 0.875rem;
+}
+
 /* layout */
 
 section {
-    margin-bottom: 35px;
+    margin-bottom: 2.25em;
+    max-width: 1070px;
+    margin: 0 auto;
 }
 
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding: 20px;
+    padding: 1.25em;
     background-image: url(/images/hero-image.png);
     background-size: cover;
     height: 300px;
     color: white;
+    max-width: 100%;
 }
 
 .hero-date,
 .hero-title,
 .posts-card-date,
 .posts-card-title {
-    margin: 8px 0;
+    margin: 0.5em 0;
 }
 
-.hero-date {
+.hero-date,
+.blog-post-date {
     text-transform: uppercase;
 }
 
@@ -90,15 +105,28 @@ section {
     margin: 0;
 }
 
-.posts {
+.posts,
+.blog-post,
+.headline,
+.intro,
+.recent-posts {
+    padding: 0 1.25em;
+}
+
+.posts-grid {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1em;
+    grid-column-gap: 1.25em;
+    margin: 2.25em 0;
 }
 
 .posts-card {
-    width: 400px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 1.5em;
+    cursor: pointer;
 }
 
 .posts-card img {
@@ -110,27 +138,148 @@ section {
     text-transform: uppercase;
 }
 
+.posts-view-more {
+    display: block;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+/* footer */
+
 footer {
     background: black;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
+    padding: 1.75em;
+    font-size: 0.75rem;
 }
 
 .footer-headline {
+    font-weight: bold;
     color: #ECECEC;
+    margin-bottom: 0;
+    line-height: 1rem;
 }
 
 .footer-text {
     color: #D7D7D7;
+    margin-top: 0;
+}
+
+/* blog post */
+
+.blog-post-date {
+    font-size: 0.75rem;
+    margin-top: 2em;
+}
+
+.blog-post-title {
+    margin: 0.5em 0;
+}
+
+.blog-post img {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 500px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.blog-last-paragraph {
+    margin-bottom: 3.125em;
+}
+
+.recent-posts-heading {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 2em;
+}
+
+/* intro */
+
+.intro-img {
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+}
+
+.intro-title {
+    margin-top: 0.875em;
+    margin-bottom: 0.5em;
+}
+
+.intro-description {
+    margin-bottom: 3.125em;
+}
+
+.headline {
+    margin-top: 2em;
 }
 
 /* utility */
 
-/** TODO **/
-/**
-- line height
-- wide screen layout
-- burger menu expand
-**/
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-text-decoration {
+    text-decoration: none;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .hero-title,
+    .hero-description {
+        max-width: 600px;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .blog-post article {
+        padding: 1em 7em;
+    }
+
+    .blog-post img {
+        padding: 0 2em;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        flex-direction: row;
+        gap: 1.875em;
+    }
+
+    .intro-title {
+        margin-bottom: 0;
+    }
+
+    .intro-description {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+    }
+
+    .headline {
+        margin-top: 5em;
+        margin-bottom: 4em;
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .posts-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
