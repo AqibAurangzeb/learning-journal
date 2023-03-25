@@ -20,11 +20,12 @@ h1 {
 h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: #0E0E0E;
 }
 
 p {
+    font-size: 1rem;
     line-height: 1.5rem;
 }
 
@@ -34,11 +35,17 @@ p {
 
 /* navigation */
 
+header {
+    background: white;
+}
+
 nav {
     display: flex;
     align-items: center;
     padding: 1.0625em 1.25em;
     background: white;
+    max-width: 1070px;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -138,11 +145,22 @@ section {
     max-width: 100%;
 }
 
-.hero-date,
-.hero-title,
-.posts-card-date,
-.posts-card-title {
+.hero-date {
+    margin-bottom: 0.5em;
+}
+.hero-title {
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+}
+
+.posts-card-date {
     margin: 0.5em 0;
+}
+
+.posts-card-title {
+    padding: 0px;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
 }
 
 .hero-date,
@@ -185,12 +203,14 @@ section {
     object-fit: cover;
 }
 
-.posts-card img:hover {
+.posts-card img:hover,
+.hero:hover {
     opacity: 50%;
     transition: 0.5s;
 }
 
-.posts-card img:not(:hover) {
+.posts-card img:not(:hover),
+.hero:not(:hover) {
     opacity: 100%;
     transition: 0.5s;
 }
@@ -221,7 +241,7 @@ footer {
     font-weight: bold;
     color: #ECECEC;
     margin-bottom: 0;
-    line-height: 1rem;
+    line-height: 1.25rem;
 }
 
 .footer-text {
@@ -246,7 +266,7 @@ footer {
     max-width: 1000px;
     max-height: 500px;
     object-fit: cover;
-    margin: 0 auto;
+    margin: 2.2em auto 2.2em 0;
 }
 
 .blog-last-paragraph {
@@ -257,6 +277,7 @@ footer {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 2em;
+    font-size: 1rem;
 }
 
 /* intro */
@@ -265,14 +286,16 @@ footer {
     width: 182px;
     height: 182px;
     border-radius: 50%;
+    margin-bottom: 1.6875em;
 }
 
 .intro-title {
-    margin-top: 0.875em;
+    margin-top: 0;
     margin-bottom: 0.5em;
 }
 
 .intro-description {
+    margin-top: 0;
     margin-bottom: 3.125em;
 }
 
@@ -301,13 +324,25 @@ footer {
     .posts-grid {
         grid-template-columns: 1fr 1fr;
     }
+
     .hero-title,
     .hero-description {
         max-width: 600px;
     }
 
+    .hero-date {
+        margin-bottom: 0.2em;
+    }
+
+    .hero-title {
+        margin-bottom: 0.2em;
+    }
+
     .hero {
         height: 500px;
+        max-width: 1085px;
+        padding-left: 3.25em;
+        padding-bottom: 3em;
     }
 
     .blog-post article {
@@ -315,7 +350,11 @@ footer {
     }
 
     .blog-post img {
-        padding: 0 2em;
+        padding: 0 3.3125em;
+    }
+
+    h1 {
+        font-size: 2.25rem;
     }
 
     h3 {
@@ -336,10 +375,28 @@ footer {
         margin-bottom: 0;
     }
 
+    .intro article {
+        padding: 0 5em;
+        font-size: 1.25rem;
+    }
+
     .headline {
+        padding: 0 4em;
         margin-top: 5em;
         margin-bottom: 4em;
-        max-width: 1200px;
+        max-width: 1075px;
+    }
+
+    .blog-post-date {
+        font-size: 1rem;
+    }
+
+    .blog-post img {
+        margin: 0;
+    }
+
+    .recent-posts-heading {
+        font-size: 1.5rem;
     }
 
     .menu {
