@@ -29,10 +29,6 @@ p {
     line-height: 1.5rem;
 }
 
-.hero-date {
-    font-size: 0.75rem;
-}
-
 /* navigation */
 
 header {
@@ -146,7 +142,7 @@ section {
 }
 
 .hero-date {
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin-bottom: 0.5em;
 }
 .hero-title {
@@ -333,6 +329,7 @@ footer {
     }
 
     .hero-date {
+        font-size: 1rem;
         margin-bottom: 0.2em;
     }
 
